@@ -1,0 +1,331 @@
+/* FONTS */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300|Roboto+Slab:400,700|Slabo+13px);
+/* COLOR PALETTE */
+#home {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#home h1.welcome {
+  position: relative;
+  text-align: center;
+  font-size: 4em;
+  top: 30%;
+}
+
+@media only screen and (max-width: 960px) {
+  #home h1.welcome {
+    font-size: 2.5em;
+  }
+}
+
+h1.welcome span.tagline {
+  position: relative;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-size: .5em;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  line-height: normal;
+  color: #ddd;
+  margin-left: -75px;
+}
+
+h1.welcome span.tag-change {
+  position: relative;
+  top: 0;
+  display: inline-block;
+  text-align: left;
+  width: 60px;
+  height: 19px;
+}
+
+h1.welcome span.tag-change a {
+  position: absolute;
+  top: 0;
+  margin-top: -10px;
+  padding: 0 5px;
+  text-transform: uppercase;
+  color: transparent;
+  text-shadow: none;
+  text-decoration: none;
+  transition: .5s;
+  -webkit-transition: .5s;
+}
+
+@media only screen and (max-width: 960px) {
+  h1.welcome span.tag-change a {
+    margin-top: 1px;
+  }
+}
+
+#home h1.welcome span.tag-change a.active {
+  top: 0;
+}
+
+/* colors */
+h1.welcome span.tag-change a.active.purple {
+  color: #39E897;
+}
+
+h1.welcome span.tag-change a.active.blue {
+  color: #FF1D23;
+}
+
+h1.welcome span.tag-change a.active.green {
+  color: #4FD4FF;
+}
+
+h1.welcome span.tag-change a.active.red {
+  color: #ff6b6b;
+}
+
+/* Slide Vertical */
+#home h1.welcome span.tag-change a.vs-out {
+  top: 30px;
+}
+
+body.slide-vertical h1.welcome span.tag-change a {
+  top: -20px;
+}
+
+/* Flip Horizontal */
+body.flip-horizontal h1.welcome span.tag-change {
+  perspective: 1000;
+}
+
+body.flip-horizontal h1.welcome span.tag-change a {
+  transform: rotateY(180deg);
+  transform-origin: 25% 0;
+}
+
+body.flip-horizontal #home h1.welcome span.tag-change a.active {
+  transform: rotateY(0deg);
+}
+
+/* Flip Vertical */
+body.flip-vertical h1.welcome span.tag-change {
+  perspective: 1000;
+}
+
+body.flip-vertical h1.welcome span.tag-change a {
+  transform: rotateX(180deg);
+}
+
+body.flip-vertical #home h1.welcome span.tag-change a.active {
+  transform: rotateX(0deg);
+}
+
+/* MAIN */
+body {
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  font-weight: 300;
+  background: #263248;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Slab", serif;
+  font-size: 3em;
+  color: #7387FF;
+}
+
+/* NAVBAR */
+header {
+  /*navbar*/
+  /*.navbar-default*/
+}
+
+header .navbar {
+  padding: 10px;
+  transition: all 0.75s linear;
+  transition-delay: 0s;
+}
+
+@media only screen and (min-width: 768px) {
+  header .navbar {
+    padding-top: 45px;
+  }
+}
+
+header .navbar-default {
+  background: transparent;
+  border: none;
+  /*navbar-nav a*/
+  /*navbar-nav active*/
+}
+
+@media only screen and (max-width: 768px) {
+  header .navbar-default {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+header .navbar-default .navbar-nav a {
+  color: white;
+  font-size: 1.5em;
+}
+
+header .navbar-default .navbar-nav a:hover {
+  color: #FF9800;
+}
+
+header .navbar-default .navbar-nav a:focus {
+  color: #fff;
+}
+
+@media only screen and (max-width: 992px) {
+  header .navbar-default .navbar-nav a {
+    font-size: 1.2em;
+  }
+}
+
+header .navbar-default .navbar-nav .active a {
+  color: #FF9800;
+  background: transparent;
+  border-bottom: 4px solid #FF9800;
+  text-shadow: none;
+  /*hover*/
+  /*focus*/
+}
+
+header .navbar-default .navbar-nav .active a:hover {
+  color: #FF9800;
+  background: transparent;
+  text-shadow: none;
+}
+
+header .navbar-default .navbar-nav .active a:focus {
+  color: #FF9800;
+  background: transparent;
+  text-shadow: none;
+}
+
+/*header*/
+/* NAVBAR BRAND */
+header .navbar-brand {
+  /*span.subhead*/
+}
+
+header .navbar-brand h1 {
+  transition: all 0.5s ease-in-out;
+  font-family: "Slabo 13px", serif;
+  color: #FF9800;
+  font-size: 1.5em;
+  margin: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.75s, opacity 0.75s linear;
+  text-shadow: 1px 1px 0px #AD6700;
+}
+
+@media only screen and (max-width: 992px) {
+  header .navbar-brand h1 {
+    font-size: 1.2em;
+  }
+}
+
+header .navbar-brand span.subhead {
+  /*@media*/
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  header .navbar-brand span.subhead {
+    display: none;
+  }
+}
+
+/*navbar-brand*/
+/* NAVBAR TOGGLE */
+header {
+  /*navbar-toggle*/
+}
+
+header .navbar-toggle {
+  background-color: #FF9800;
+  height: 40px;
+  border: none;
+}
+
+header .navbar-default .navbar-toggle:hover {
+  background-color: #FFC700;
+}
+
+header .navbar-default .navbar-toggle:focus {
+  background-color: #FF9800;
+}
+
+header .navbar-default .navbar-toggle .icon-bar {
+  background-color: #000;
+}
+
+header .navbar-default .navbar-collapse.in {
+  border: none;
+}
+
+header .navbar-collapse.collapsing {
+  border: none;
+}
+
+/*navbar toggle*/
+/*NAV INBODY*/
+header .inbody {
+  background: #000;
+  padding: 5px;
+  box-shadow: 2px 1px 2px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease-in-out;
+  /*header .inbody h1*/
+}
+
+header .inbody h1 {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+/* PAGE */
+.page {
+  padding: 50px 0;
+  /*page h2*/
+}
+
+.page h2 {
+  margin-bottom: 50px;
+  text-align: center;
+  color: #fff;
+}
+
+/* FEATURED */
+#featured {
+  background: linear-gradient(to bottom, transparent, transparent), url("../images/splash.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom: 50px;
+  /*valign*/
+}
+
+#featured .valign {
+  position: absolute;
+  top: 55%;
+  background: rgba(0, 0, 0, 0.75);
+  padding-bottom: 35px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  width: 100%;
+}
+
+#featured h1 {
+  color: #FF9800;
+}
+
+#featured h2 {
+  font-size: 2.3em;
+  margin: 0;
+}
+
+/*splash*/
+/* BIO */

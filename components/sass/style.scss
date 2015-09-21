@@ -1,0 +1,51 @@
+@import "variables";
+@import "mixins";
+@import "tagline";
+
+
+/* MAIN */
+body {
+ font-family: $bodyFont;
+ color: $white;
+ font-weight: $light;
+ background:$darkBlue;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $headFont;
+  font-size: 3em;
+  color: $lightBlue;
+}
+@import "navbar";
+/* PAGE */
+.page {
+padding: 50px 0;
+
+	h2 {
+		margin-bottom:50px;
+		text-align: center;
+		color:$white;
+	}/*page h2*/
+}
+
+/* FEATURED */
+#featured {
+	@include backImage('../images/splash.jpg');
+	margin-bottom: 50px;
+	.valign {
+		position: absolute;
+		top:55%;
+		background: rgba($black, .75);
+		padding-bottom: 35px;
+		border-top: 1px solid rgba($white,.5);
+		border-bottom: 1px solid rgba($white,.5);
+		width: 100%;
+	}/*valign*/
+	h1 {color:$orange;}
+	h2 {font-size: 2.3em; margin:0;}
+}/*splash*/
+
+/* BIO */
+#bio {
+
+}

@@ -1,0 +1,71 @@
+#home {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+} 
+#home h1.welcome {
+    position: relative;
+    text-align: center;
+    font-size: 4em;
+    top: 30%;
+  @media only screen and (max-width: 960px) {
+        font-size:2.5em;
+    }
+  }
+    h1.welcome span.tagline {
+      position: relative;
+      text-transform: uppercase;
+      font-family: $bodyFont;
+      font-size: .5em;
+      text-shadow: 0 1px 0 rgba(0,0,0,.2);
+      line-height: normal;
+      color: #ddd;
+      margin-left: -75px;
+    }
+      h1.welcome span.tag-change {
+        position: relative;
+        top: 0;
+        display: inline-block;
+        text-align: left;
+        width: 60px;
+        height: 19px;
+      }
+      h1.welcome span.tag-change a {
+        position: absolute;
+        top: 0;
+        margin-top: -10px;
+        padding: 0 5px;
+        text-transform: uppercase;
+        color: transparent;
+        text-shadow: none;
+        text-decoration: none; 
+        transition: .5s;
+        -webkit-transition: .5s;
+        @media only screen and (max-width: 960px){
+          margin-top:1px;}
+      }
+      #home h1.welcome span.tag-change a.active { top: 0; }
+ 
+      /* colors */
+      h1.welcome span.tag-change a.active.purple { color: $green; }
+      h1.welcome span.tag-change a.active.blue { color: $red; }
+      h1.welcome span.tag-change a.active.green { color: $aqua; }
+      h1.welcome span.tag-change a.active.red { color: #ff6b6b; }
+ 
+ 
+      /* Slide Vertical */
+      #home h1.welcome span.tag-change a.vs-out { top: 30px; }
+      body.slide-vertical h1.welcome span.tag-change a { top: -20px;}
+ 
+      /* Flip Horizontal */
+      body.flip-horizontal h1.welcome span.tag-change { perspective: 1000; }
+      body.flip-horizontal h1.welcome span.tag-change a { 
+        transform: rotateY(180deg); 
+        transform-origin: 25% 0;
+      }
+      body.flip-horizontal #home h1.welcome span.tag-change a.active { transform: rotateY(0deg); }
+ 
+      /* Flip Vertical */
+      body.flip-vertical h1.welcome span.tag-change { perspective: 1000; }
+      body.flip-vertical h1.welcome span.tag-change a { transform: rotateX(180deg); }
+      body.flip-vertical #home h1.welcome span.tag-change a.active { transform: rotateX(0deg); }
