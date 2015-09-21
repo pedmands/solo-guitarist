@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
 	<meta charset="UTF-8">
 	<title>Preston Edmands - Entertainer</title>
@@ -7,6 +7,8 @@
 	
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/prefixfree.min.js"></script>
+	<link href="//vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+	<script src="//vjs.zencdn.net/4.12/video.js"></script>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -66,18 +68,27 @@
 	<div class="page fullheight" id="bio">
 		<div class="content container">
 			<h2>Biography</h2>
+			<span class="horz"></span>
 				<div class="row">
 			<p class="col-lg-12 col-md-6 col-sm-12">Preston Clark Edmands is a songwriter and musician from Maine, USA. With no formal training in music, he learned own his own to play, sing, and compose music. Today, he works as a lounge entertainer, performing artist, and audio engineer, while furthering his education independently.<br /><br /> Preston loves working and playing with other musicians from all around the world, and gets a fair bit of travel in, himself.</p>
 			<p class="col-lg-12 col-md-6 col-sm-12">His work has taken him to over twenty countries, including Thailand, Malta, Italy, and Jamaica.<br /><br />But Preston’s roots will always be intwined in New England and her various charms, having cast their spell upon him in early childhood. “There’s a certain stoicism that comes with winter in Maine, and that lends itself well to the artistically inclined. We have the need to create,  no matter what the external circumstances may be,” Edmands opines.</p>
 		</div><!-- row -->
+		<span class="horz"></span>
 		</div><!-- content container -->
 	</div><!-- bio page -->
 
 	<div class="page fullheight" id="video">
-		<div class="content container text-center">
-		<div class="valign">
-			<img src="images/640x360.png" height="100%" width="100%" style="max-width:640px;">
-		</div>
+		<div class="content container" >
+		<center>
+		<h2>Video</h2>
+			<video id="video1" class="video-js vjs-default-skin vjs-big-play-centered"
+			  controls preload="auto" height="480"
+			  poster="http://video-js.zencoder.com/oceans-clip.png"
+			  data-setup='{"example_option":true}'>
+			 <source src="video/preston.mp4" type='video/mp4' />
+			 <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+			</video>
+		</center>
 		</div>
 	</div><!-- video page -->
 <div class="parallax-container">
@@ -88,13 +99,13 @@
 	<div class="page" id="testimonials">
 		<div class="container content">
 			<h2>Testimonials</h2>
-			<blockquote>
-				<div class="quote">Preston was AMAZING! Our guests loved him. One of our guests wanted him to travel to NY for his party. Great song choices and great musical ability. Hire him today!</div>
-				<div class="client">Chris M.</div>
+			<blockquote class="col-sm-6 testi1">
+				<p class="quote">Preston was AMAZING! Our guests loved him. One of our guests wanted him to travel to NY for his party. Great song choices and great musical ability. Hire him today!</p>
+				<p class="client">Chris M.</p>
 			</blockquote>
-			<blockquote>
-				<div class="quote">Preston is a talented musician. He is capable of playing a wide range of styles and songs. He is able to adapt his repetoire to the audience and he always holds them captive.</div>
-				<div class="client">Harriet S.</div>
+			<blockquote class="col-sm-6 testi2">
+				<p class="quote">Preston is a talented musician. He is capable of playing a wide range of styles and songs. He is able to adapt his repetoire to the audience and he always holds them captive.</p>
+				<p class="client">Harriet S.</p>
 			</blockquote>
 		</div>
 	</div><!-- testimonials page -->
@@ -124,5 +135,6 @@
 	<script src="js/materialize.min.js"></script>
 	<script src="js/myscript.js"></script>
 	<script src="js/tagline.js"></script>
+	<script src="js/video-app.js"></script>
 </body>
 </html>

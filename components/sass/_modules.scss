@@ -1,9 +1,10 @@
 .page {
-padding: 50px 0;
+padding: 25px 0;
 	h2 {
 		margin-bottom:50px;
 		text-align: center;
 		font-weight: $bold;
+		@media only screen and (max-width: 767px){font-size:2em;margin-top: 0;margin-bottom: 25px;}
 	}
 }/*page*/
 
@@ -18,38 +19,97 @@ padding: 50px 0;
 		border-bottom: 1px solid rgba($white,.5);
 		width: 100%;
 	}/*valign*/
-	h1 {color:$orange;}
+	h1 {color:$orange;font-family:$titleFont;text-shadow: 2px 3px 0px $darkOrange;}
 	h2 {font-size: 2.3em; margin:0;}
 }/*splash*/
 
 #bio {
-	h2{color:$white;}
-	@include linearGradient(adjust-color($darkBlue, $lightness: 15%), $darkBlue);
+	h2{color:adjust-color($darkBlue, $lightness: -10%);font-weight:$normal;text-shadow: 0px 2px 0px adjust-color($darkBlue, $lightness: 5%);
+	}
+	@include linearGradient(adjust-color($darkBlue, $lightness: -5%), adjust-color($darkBlue, $lightness: 10%));
 	p{
 		text-align: justify;
-		@media only screen and (min-width: 992px){font-size:1.8em;}
+		@media only screen and (max-width: 767px){font-size:1.2em;}
+		@media only screen and (min-width: 768px){font-size:1.5em;}
+		@media only screen and (min-width: 992px){font-size:1.7em;}
+		@media only screen and (min-width: 1200px){font-size:1.9em;}
 		
 	}
+	.row {padding:25px;}
+	.horz {
+		width:100%;display:block;opacity: .25;
+		border-bottom: 1px solid adjust-color($darkBlue, $lightness: 50%);
+		border-top: 2px solid $black;
+		border-radius: 10px;
+		&:before{content:"";}
+	}
 }/*bio*/
-#video {
-	position: relative;
+#video{
+	h2{color:$black;text-shadow: 0px 2px 0px adjust-color($black, $lightness: 25%);}
 	@include linearGradient(adjust-color($black, $lightness: 15%), $black);
+	#video1 {
+	position: relative;
+	width:85% !important;
+	border:10px solid $black;
 	.valign {
 		position: absolute;
 		top:25%;
+		}
 	}
 }
 #testimonials {
-	h2 {color:$orange;}
+	h2 {color:$orange;text-shadow: 0px 2px 0px $darkOrange}
 	background: $white;
 	blockquote{
 		color:$black;
 		font-size: 1.5em;
-	}
+		border: none;
+		margin:0;
+		p {font-size:1em;}
+		.quote {
+		  position:relative;
+		  padding:15px;
+		  margin:1em 0 1em;
+		  border:5px solid $aqua;
+		  color:#333;
+		  background:#fff;
+		  /* css3 */
+		  -webkit-border-radius:10px;
+		  -moz-border-radius:10px;
+		  border-radius:10px;
+		  &:before{
+			  content:"";
+			  position:absolute;
+			  bottom:-20px; /* value = - border-top-width - border-bottom-width */
+			  left:40px; /* controls horizontal position */
+			  border-width:20px 20px 0;
+			  border-style:solid;
+			  border-color:$aqua transparent;
+			  /* reduce the damage in FF3.0 */
+			  display:block;
+			  width:0;
+			}/*before*/
+			&:after {
+			  content:"";
+			  position:absolute;
+			  bottom:-13px; /* value = - border-top-width - border-bottom-width */
+			  left:47px; /* value = (:before left) + (:before border-left) - (:after border-left) */
+			  border-width:13px 13px 0;
+			  border-style:solid;
+			  border-color:#fff transparent;
+			  /* reduce the damage in FF3.0 */
+			  display:block;
+			  width:0;
+			}/*after*/
+		}/*quote*/
+		.client {font-size: 1.5em;margin:0;padding:0;font-family: $headFont;}
+	}/*blockquote*/
 }
 #song-list {
-	@include linearGradient(adjust-color($darkBlue, $lightness: 15%), $darkBlue);
+	@include linearGradient(adjust-color($darkBlue, $lightness: 15%), adjust-color($darkBlue, $lightness: -10%));
+	h2{color:$white;}
 }
 #contact {
-	@include linearGradient(adjust-color($black, $lightness: 15%), $black);
+	@include linearGradient($black, adjust-color($black, $lightness: 15%));
+	h2{color:$orange;}
 }
