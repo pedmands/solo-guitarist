@@ -1,0 +1,55 @@
+.page {
+padding: 50px 0;
+	h2 {
+		margin-bottom:50px;
+		text-align: center;
+		font-weight: $bold;
+	}
+}/*page*/
+
+#featured {
+	@include backImage('../images/splash.jpg');
+	.valign {
+		position: absolute;
+		top:55%;
+		background: rgba($black, .75);
+		padding-bottom: 35px;
+		border-top: 1px solid rgba($white,.5);
+		border-bottom: 1px solid rgba($white,.5);
+		width: 100%;
+	}/*valign*/
+	h1 {color:$orange;}
+	h2 {font-size: 2.3em; margin:0;}
+}/*splash*/
+
+#bio {
+	h2{color:$white;}
+	@include linearGradient(adjust-color($darkBlue, $lightness: 15%), $darkBlue);
+	p{
+		text-align: justify;
+		@media only screen and (min-width: 992px){font-size:1.8em;}
+		
+	}
+}/*bio*/
+#video {
+	position: relative;
+	@include linearGradient(adjust-color($black, $lightness: 15%), $black);
+	.valign {
+		position: absolute;
+		top:25%;
+	}
+}
+#testimonials {
+	h2 {color:$orange;}
+	background: $white;
+	blockquote{
+		color:$black;
+		font-size: 1.5em;
+	}
+}
+#song-list {
+	@include linearGradient(adjust-color($darkBlue, $lightness: 15%), $darkBlue);
+}
+#contact {
+	@include linearGradient(adjust-color($black, $lightness: 15%), $black);
+}
